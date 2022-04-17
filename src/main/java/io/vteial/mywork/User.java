@@ -1,8 +1,10 @@
 package io.vteial.mywork;
 
-import lombok.Data;
+import java.util.Objects;
 
-@Data
+//import lombok.Data;
+//
+//@Data
 public class User {
 
     long id;
@@ -34,11 +36,7 @@ public class User {
         sb.append("[ id : ");
         sb.append(this.id);
         sb.append(", name : ");
-        if(this.name != null) {
-            sb.append(this.name);
-        } else {
-            sb.append("NULL");
-        }
+        sb.append(Objects.requireNonNullElse(this.name, "NULL"));
         sb.append(" ]");
         return sb.toString();
     }
