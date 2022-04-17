@@ -23,11 +23,8 @@ public class MyWorkApplication implements CommandLineRunner {
     public void run(String... args) {
 		_log.info("*******App Started*********");
 
-//		User u = User.builder().id(1L).name("Kamil Khan").build();
-//		User u = new User();
-//		u.setId(1L);
-//		u.setName("Kamil Khan");
-//		_log.info("{}", u);
+		User u = User.builder().id(1L).name("Kamil Khan").build();
+		_log.info("{}", u);
 
 		JSONObject jsonObject = new JSONObject();
 		jsonObject.put("id", 1L);
